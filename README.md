@@ -2,6 +2,10 @@
 
 교과서 1단원을 주제별 수업 슬라이드와 가상실험으로 재구성한 정적 웹 수업 자료입니다.
 
+## 바로 열기
+
+- GitHub Pages: https://totoromaum.github.io/middle-school-science-material-properties/
+
 ## 수업 구성
 
 - 물질의 밀도와 뜨고 가라앉는 현상
@@ -12,17 +16,6 @@
 - 물·소금·기름·플라스틱 구슬 통합 분리 설계
 - 4문항 형성 평가와 교사용 수업 노트
 
-## 실행
-
-GitHub Pages에서 사용하는 완전한 정적 사이트는 `public/` 폴더에 있습니다. `public/index.html`을 브라우저에서 열어도 작동하며 별도 서버나 API가 필요하지 않습니다.
-
-개발 미리보기와 Sites 배포용 래퍼는 다음 명령으로 실행합니다.
-
-```bash
-npm install
-npm run dev
-```
-
 ## 조작
 
 - 화면 왼쪽 주제 메뉴 또는 `←` `→` 키로 슬라이드 이동
@@ -30,6 +23,6 @@ npm run dev
 - 전체 화면 버튼으로 수업용 프레젠테이션 전환
 - 각 주제의 범위·버튼으로 가상실험 조작
 
-## 기술
+## 배포
 
-수업 본체는 HTML, CSS, JavaScript만 사용하며 외부 라이브러리·CDN·로그인·서버 저장소에 의존하지 않습니다. GitHub Pages 배포는 `.github/workflows/pages.yml`에서 `public/` 폴더를 그대로 게시합니다.
+GitHub Pages가 `main` 브랜치의 저장소 루트를 직접 게시합니다. 수업 본체는 `index.html`, `styles.css`, `app.js`, `favicon.svg`로 구성되어 있으며 외부 라이브러리·CDN·로그인·서버 저장소에 의존하지 않습니다.
