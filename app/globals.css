@@ -1,0 +1,6 @@
+* { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #f3efe5; }
+body { font-family: Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", system-ui, sans-serif; }
+.lesson-frame-shell { position: relative; width: 100%; height: 100%; }
+.lesson-frame { display: block; width: 100%; height: 100%; border: 0; background: #f3efe5; }
+.lesson-frame-fallback { position: fixed; left: -9999px; }

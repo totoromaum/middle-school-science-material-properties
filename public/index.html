@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102a43">
+  <meta name="description" content="중학교 2학년 과학 Ⅰ. 물질의 특성 - 주제별 슬라이드와 가상실험 수업 도구">
+  <meta property="og:title" content="중2 과학 Ⅰ. 물질의 특성">
+  <meta property="og:description" content="슬라이드 · 가상실험 · 수업노트">
+  <meta property="og:image" content="og.png">
+  <title>중2 과학 Ⅰ. 물질의 특성 | 인터랙티브 수업</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#slideStage">수업 내용으로 바로가기</a>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-block">
+        <span class="brand-mark" aria-hidden="true">Ⅰ</span>
+        <div>
+          <p class="eyebrow">MIDDLE SCHOOL SCIENCE · GRADE 8</p>
+          <h1>물질의 특성</h1>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button class="ghost-button" id="overviewButton" type="button" aria-haspopup="dialog">수업 지도</button>
+        <button class="ghost-button teacher-toggle" id="teacherToggle" type="button" aria-pressed="false">
+          <span class="toggle-dot" aria-hidden="true"></span> 교사 노트
+        </button>
+        <button class="icon-button" id="fullscreenButton" type="button" aria-label="전체 화면으로 보기" title="전체 화면">⛶</button>
+      </div>
+    </header>
+
+    <nav class="topic-rail" id="topicRail" aria-label="주제별 슬라이드">
+      <div class="rail-label">LESSON MAP</div>
+      <button class="topic-button active" type="button" data-go="0" aria-current="page"><span>00</span><strong>단원 열기</strong></button>
+      <button class="topic-button" type="button" data-go="1"><span>01</span><strong>밀도</strong></button>
+      <button class="topic-button" type="button" data-go="2"><span>02</span><strong>용해도</strong></button>
+      <button class="topic-button" type="button" data-go="3"><span>03</span><strong>끓는점·녹는점</strong></button>
+      <button class="topic-button" type="button" data-go="4"><span>04</span><strong>순물질·혼합물</strong></button>
+      <button class="topic-button" type="button" data-go="5"><span>05</span><strong>밀도로 분리</strong></button>
+      <button class="topic-button" type="button" data-go="6"><span>06</span><strong>용해도로 분리</strong></button>
+      <button class="topic-button" type="button" data-go="7"><span>07</span><strong>끓는점으로 분리</strong></button>
+      <button class="topic-button" type="button" data-go="8"><span>08</span><strong>통합 가상실험</strong></button>
+      <button class="topic-button" type="button" data-go="9"><span>09</span><strong>정리·평가</strong></button>
+      <div class="rail-key"><kbd>←</kbd><kbd>→</kbd><span>슬라이드 이동</span></div>
+    </nav>
+
+    <main class="stage" id="slideStage" tabindex="-1">
+      <section class="slide cover-slide active" data-slide="0" aria-labelledby="slide-title-0">
+        <div class="slide-scroll cover-layout">
+          <div class="cover-copy">
+            <p class="section-kicker"><span>UNIT Ⅰ</span> 물질의 특성</p>
+            <h2 id="slide-title-0">보이지 않는 차이를<br><em>측정</em>하고, <em>분리</em>하다.</h2>
+            <p class="cover-lead">“같아 보이는 물질을 어떻게 구별할까?”에서 출발해 물질의 고유한 성질을 찾고, 그 차이를 이용해 혼합물을 분리하는 단원입니다.</p>
+            <div class="cover-actions">
+              <button class="primary-button" type="button" data-go="1">첫 수업 시작 <span aria-hidden="true">→</span></button>
+              <button class="text-button" type="button" data-go="8">통합 가상실험 바로가기</button>
+            </div>
+            <div class="lesson-metrics" aria-label="수업 자료 구성">
+              <div><strong>10</strong><span>주제 슬라이드</span></div>
+              <div><strong>6</strong><span>가상실험</span></div>
+              <div><strong>45′</strong><span>차시별 권장</span></div>
+            </div>
+          </div>
+          <div class="cover-visual" aria-label="물질의 특성에서 혼합물 분리로 이어지는 개념 구조">
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="concept-core"><span>물질을</span><strong>구별</strong></div>
+            <div class="concept-node node-density"><b>ρ</b><span>밀도</span></div>
+            <div class="concept-node node-solubility"><b>S</b><span>용해도</span></div>
+            <div class="concept-node node-temperature"><b>°C</b><span>상태 변화 온도</span></div>
+            <div class="concept-result"><span>특성의 차이</span><strong>혼합물 분리</strong></div>
+          </div>
+          <aside class="teacher-note">
+            <b>도입 질문</b><p>철 캔과 알루미늄 캔처럼 겉모습이 비슷한 물질은 무엇으로 구별할 수 있을까?</p>
+            <b>수업 흐름</b><p>구별하기 → 특성 찾기 → 차이 비교하기 → 분리 문제 해결하기</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="1" aria-labelledby="slide-title-1">
+        <div class="slide-scroll">
+          <header class="slide-heading">
+            <div><p class="section-kicker"><span>TOPIC 01</span> 뜨고 가라앉는 정도</p><h2 id="slide-title-1">밀도는 ‘무거움’이 아니라<br><em>단위 부피당 질량</em>이다.</h2></div>
+            <div class="goal-chip"><span>학습 목표</span>질량과 부피를 측정해 밀도를 구하고 물질을 구별한다.</div>
+          </header>
+          <div class="two-column lesson-grid">
+            <article class="concept-panel">
+              <div class="formula-card"><span>밀도</span><strong>ρ = <span class="fraction"><i>질량</i><i>부피</i></span></strong><small>단위: g/cm³, g/mL</small></div>
+              <div class="rule-list">
+                <div><span>01</span><p>온도와 압력이 같을 때 <b>물질의 양과 관계없이 일정</b></p></div>
+                <div><span>02</span><p>같은 부피라면 질량이 클수록 밀도가 크다.</p></div>
+                <div><span>03</span><p>주변 액체보다 밀도가 작으면 뜨고, 크면 가라앉는다.</p></div>
+              </div>
+              <div class="misconception"><b>오개념 경보</b><p>“더 무거우면 가라앉는다”가 아니라 <strong>밀도가 더 크면</strong> 가라앉는다.</p></div>
+            </article>
+            <article class="lab-card" id="densityLab">
+              <div class="lab-header"><div><span>가상실험 01</span><h3>밀도 측정소</h3></div><button class="mini-button" id="densityReset" type="button">초기화</button></div>
+              <div class="preset-row" aria-label="물질 예시"><button type="button" data-density-preset="wood">나무</button><button type="button" data-density-preset="aluminum">알루미늄</button><button type="button" data-density-preset="iron">철</button></div>
+              <div class="density-workbench">
+                <div class="control-stack">
+                  <label for="massRange"><span>질량</span><output id="massOutput">78 g</output></label>
+                  <input id="massRange" type="range" min="10" max="200" value="78">
+                  <label for="volumeRange"><span>부피</span><output id="volumeOutput">40 mL</output></label>
+                  <input id="volumeRange" type="range" min="10" max="100" value="40">
+                  <div class="result-readout"><span>계산한 밀도</span><strong id="densityOutput">1.95</strong><small>g/mL</small></div>
+                </div>
+                <div class="water-tank" aria-label="물속 시료의 뜨고 가라앉는 모습">
+                  <div class="water-line"><span>물 1.00 g/mL</span></div>
+                  <div class="sample-block" id="sampleBlock"><span>시료</span></div>
+                  <div class="tank-base"></div>
+                </div>
+              </div>
+              <p class="lab-conclusion" id="densityConclusion" aria-live="polite">물보다 밀도가 크므로 바닥으로 가라앉습니다.</p>
+            </article>
+          </div>
+          <aside class="teacher-note"><b>교사 포인트</b><p>철의 크기가 달라도 밀도는 약 7.87 g/mL로 같다는 실험 결과를 먼저 비교하게 하세요.</p><b>형성 평가</b><p>통나무는 모래보다 무거운데도 물에 뜰 수 있는 까닭을 밀도로 설명해 보자.</p></aside>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="2" aria-labelledby="slide-title-2">
+        <div class="slide-scroll">
+          <header class="slide-heading">
+            <div><p class="section-kicker"><span>TOPIC 02</span> 녹을 수 있는 한계</p><h2 id="slide-title-2">용해도는 <em>온도와 용매</em>를<br>함께 말해야 한다.</h2></div>
+            <div class="goal-chip"><span>학습 목표</span>용해도 곡선으로 포화 상태와 석출량을 해석한다.</div>
+          </header>
+          <div class="solubility-layout">
+            <article class="concept-panel compact">
+              <div class="definition-card"><span>용해도</span><p>어떤 온도에서 <b>용매 100 g</b>에 최대로 녹을 수 있는 용질의 g 수</p></div>
+              <div class="state-legend"><div><i class="dot low"></i><b>불포화</b><span>더 녹을 수 있음</span></div><div><i class="dot exact"></i><b>포화</b><span>최대로 녹음</span></div><div><i class="dot high"></i><b>고체 남음</b><span>한계 초과</span></div></div>
+              <p class="concept-caption">대부분의 고체는 온도가 높을수록 용해도가 커지지만, 기체는 일반적으로 온도가 낮고 압력이 높을수록 잘 녹습니다.</p>
+              <div class="gas-rule"><span>기체 용해도</span><strong>낮은 온도 ↓</strong><strong>높은 압력 ↑</strong></div>
+            </article>
+            <article class="lab-card solubility-lab">
+              <div class="lab-header"><div><span>가상실험 02</span><h3>용해도 곡선 판독기</h3></div><div class="select-wrap"><label for="soluteSelect">용질</label><select id="soluteSelect"><option value="kno3">질산 칼륨</option><option value="boric">붕산</option><option value="nacl">염화 나트륨</option></select></div></div>
+              <div class="chart-and-controls">
+                <div class="chart-wrap"><canvas id="solubilityChart" width="640" height="340" aria-label="온도에 따른 용해도 곡선"></canvas></div>
+                <div class="control-stack slim">
+                  <label for="temperatureRange"><span>물의 온도</span><output id="temperatureOutput">40 °C</output></label>
+                  <input id="temperatureRange" type="range" min="0" max="80" step="5" value="40">
+                  <label for="soluteAmountRange"><span>넣은 용질</span><output id="soluteAmountOutput">60 g</output></label>
+                  <input id="soluteAmountRange" type="range" min="0" max="130" step="1" value="60">
+                  <div class="beaker-mini"><div id="solutionFill"></div><div class="solid-pile" id="solidPile"></div><span>물 100 g</span></div>
+                </div>
+              </div>
+              <div class="analysis-strip"><span id="solutionState">포화 용액 + 고체</span><p>이 온도의 용해도는 <b id="solubilityValue">64.0 g</b>, 남는 고체는 <b id="solidMass">0.0 g</b>입니다.</p></div>
+            </article>
+          </div>
+          <aside class="teacher-note"><b>그래프 읽기</b><p>x축에서 온도를 고르고 곡선까지 올라간 뒤 y축의 용해도를 읽게 하세요.</p><b>확장 질문</b><p>뜨거운 탄산음료에서 기포가 더 많이 생기는 까닭은 무엇일까?</p></aside>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="3" aria-labelledby="slide-title-3">
+        <div class="slide-scroll">
+          <header class="slide-heading">
+            <div><p class="section-kicker"><span>TOPIC 03</span> 상태가 변할 때의 온도</p><h2 id="slide-title-3">그래프가 평평해지는 순간,<br><em>상태가 변한다.</em></h2></div>
+            <div class="goal-chip"><span>학습 목표</span>끓는점·녹는점이 물질의 고유한 특성임을 설명한다.</div>
+          </header>
+          <div class="two-column lesson-grid">
+            <article class="concept-panel">
+              <div class="phase-cards"><div><span>액체 → 기체</span><strong>끓는점</strong><small>물 100 °C · 에탄올 78.2 °C</small></div><div><span>고체 → 액체</span><strong>녹는점</strong><small>로르산 43.8 °C · 팔미트산 62.5 °C</small></div></div>
+              <div class="energy-story"><div class="energy-arrow"></div><p>상태 변화 동안 공급한 에너지는 온도를 높이기보다 <b>입자 사이의 결합을 바꾸는 데</b> 쓰여 온도가 일정하게 유지됩니다.</p></div>
+              <div class="compare-table" role="table" aria-label="물질의 양과 종류에 따른 상태 변화 온도"><div role="row"><span>바꾼 것</span><span>도달 시간</span><span>상태 변화 온도</span></div><div role="row"><b>물질의 양</b><span>달라짐</span><strong>같음</strong></div><div role="row"><b>물질의 종류</b><span>달라질 수 있음</span><strong>다름</strong></div></div>
+            </article>
+            <article class="lab-card" id="heatingLab">
+              <div class="lab-header"><div><span>가상실험 03</span><h3>가열 곡선 실험실</h3></div><button class="mini-button" id="heatingReset" type="button">초기화</button></div>
+              <div class="sim-toolbar"><label for="substanceSelect">물질<select id="substanceSelect"><option value="water">물</option><option value="ethanol">에탄올</option><option value="lauric">로르산</option><option value="palmitic">팔미트산</option></select></label><label for="massSelect">양<select id="massSelect"><option value="50">50 g</option><option value="100" selected>100 g</option><option value="150">150 g</option></select></label><button class="primary-button compact-button" id="heatStart" type="button">가열 시작</button></div>
+              <div class="heating-view"><canvas id="heatingChart" width="640" height="330" aria-label="선택한 물질의 가열 곡선"></canvas><div class="thermometer"><div class="thermometer-fill" id="thermometerFill"></div><span id="thermometerText">20 °C</span></div></div>
+              <div class="analysis-strip"><span id="phaseState">가열 전</span><p id="heatingInsight">물질을 고르고 가열을 시작해 보세요.</p></div>
+            </article>
+          </div>
+          <aside class="teacher-note"><b>관찰 포인트</b><p>물질의 양이 많으면 끓는점에 늦게 도달하지만 끓는점 자체는 변하지 않습니다.</p><b>오개념 경보</b><p>끓는 동안에도 계속 가열하므로 온도가 계속 오른다는 생각을 그래프로 교정하세요.</p></aside>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="4" aria-labelledby="slide-title-4">
+        <div class="slide-scroll">
+          <header class="slide-heading">
+            <div><p class="section-kicker"><span>TOPIC 04</span> 한 가지인가, 여러 가지인가</p><h2 id="slide-title-4">순물질은 <em>일정한 값</em>,<br>혼합물은 <em>조성에 따라 변화</em>.</h2></div>
+            <div class="goal-chip"><span>학습 목표</span>물질의 특성을 근거로 순물질과 혼합물을 분류한다.</div>
+          </header>
+          <div class="classification-layout">
+            <article class="curve-card"><div class="card-label">증거 1 · 냉각 곡선</div><canvas id="purityChart" width="700" height="360" aria-label="순물질과 혼합물의 냉각 곡선 비교"></canvas><div class="curve-legend"><span><i class="line solid"></i>순물질: 어는 동안 일정</span><span><i class="line dash"></i>혼합물: 어는 동안에도 변화</span></div></article>
+            <article class="sort-card">
+              <div class="card-label">증거 2 · 분류 도전</div>
+              <p>카드를 눌러 분류한 뒤 근거를 확인하세요.</p>
+              <div class="sort-zones"><div><span>순물질</span><div id="pureZone" class="drop-zone"></div></div><div><span>혼합물</span><div id="mixtureZone" class="drop-zone"></div></div></div>
+              <div class="material-bank" id="materialBank"><button type="button" data-kind="pure">물</button><button type="button" data-kind="pure">산소</button><button type="button" data-kind="pure">염화 나트륨</button><button type="button" data-kind="mixture">공기</button><button type="button" data-kind="mixture">바닷물</button><button type="button" data-kind="mixture">우유</button></div>
+              <div class="sort-actions"><button class="mini-button" id="sortCheck" type="button">분류 확인</button><button class="text-button" id="sortReset" type="button">다시 하기</button><span id="sortFeedback" aria-live="polite"></span></div>
+            </article>
+          </div>
+          <div class="evidence-banner"><strong>판별 기준</strong><span>한 가지 물질로만 이루어짐</span><i>→</i><span>물질의 특성이 일정</span><i>→</i><b>순물질</b></div>
+          <aside class="teacher-note"><b>용어 지도</b><p>‘순수하다’의 일상적 의미와 과학적 의미가 다름을 짚어 주세요. 깨끗한 공기도 과학적으로는 혼합물입니다.</p><b>형성 평가</b><p>물과 소금물의 가열 곡선을 보고 각각 순물질과 혼합물로 판단한 근거를 말해 보자.</p></aside>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="5" aria-labelledby="slide-title-5">
+        <div class="slide-scroll">
+          <header class="slide-heading">
+            <div><p class="section-kicker"><span>TOPIC 05</span> 밀도 차로 분리</p><h2 id="slide-title-5">섞이지 않는 두 액체는<br><em>층의 순서</em>가 단서다.</h2></div>
+            <div class="goal-chip"><span>학습 목표</span>분별 깔때기로 밀도가 다른 액체 혼합물을 분리한다.</div>
+          </header>
+          <div class="separator-layout">
+            <article class="concept-panel narrow">
+              <ol class="procedure-list"><li><span>1</span><p>꼭지를 잠그고 혼합물을 넣는다.</p></li><li><span>2</span><p>층이 완전히 나뉠 때까지 기다린다.</p></li><li><span>3</span><p>마개를 열고 아래층부터 받는다.</p></li><li><span>4</span><p>경계면에서 꼭지를 잠근다.</p></li></ol>
+              <div class="safety-card"><b>실험 핵심</b><p>마개를 닫은 채 꼭지를 열면 압력 때문에 액체가 원활히 나오지 않을 수 있습니다.</p></div>
+              <div class="life-examples"><span>생활 속 적용</span><b>바다의 기름막</b><b>샐러드 소스</b><b>키질</b></div>
+            </article>
+            <article class="lab-card separator-lab">
+              <div class="lab-header"><div><span>가상실험 04</span><h3>분별 깔때기 조작</h3></div><button class="mini-button" id="separatorReset" type="button">다시 채우기</button></div>
+              <div class="separator-workbench">
+                <div class="funnel-rig" aria-label="물과 콩기름이 든 분별 깔때기">
+                  <div class="funnel-cap"></div>
+                  <div class="funnel-body"><div class="oil-layer" id="oilLayer"><span>콩기름<br>0.92</span></div><div class="water-layer" id="waterLayer"><span>물<br>1.00</span></div></div>
+                  <button class="stopcock" id="stopcockButton" type="button" aria-pressed="false" aria-label="분별 깔때기 꼭지 열기"><span></span></button>
+                  <div class="funnel-stem"><div class="stream" id="separatorStream"></div></div>
+                </div>
+                <div class="receiving-beaker"><div class="collected-water" id="collectedWater"></div><span>받는 비커</span></div>
+                <div class="observation-card"><span>관찰 기록</span><strong id="separatorStatus">두 층이 나뉘었습니다.</strong><p id="separatorHint">어떤 액체가 아래층인지 밀도로 판단한 뒤 꼭지를 여세요.</p></div>
+              </div>
+              <button class="primary-button compact-button" id="separatorAction" type="button">꼭지 열기</button>
+            </article>
+          </div>
+          <aside class="teacher-note"><b>발문</b><p>위층이 콩기름이라는 사실을 색이 아니라 밀돗값으로 설명하게 하세요.</p><b>실험 안전</b><p>실제 실험에서는 유리 기구 파손과 꼭지 조작에 주의하고 보안경을 착용합니다.</p></aside>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="6" aria-labelledby="slide-title-6">
+        <div class="slide-scroll">
+          <header class="slide-heading">
+            <div><p class="section-kicker"><span>TOPIC 06</span> 용해도 차로 분리</p><h2 id="slide-title-6">뜨거울 때 녹이고,<br>식혀서 <em>결정</em>으로 꺼낸다.</h2></div>
+            <div class="goal-chip"><span>학습 목표</span>온도에 따른 용해도 차로 고체 혼합물을 분리한다.</div>
+          </header>
+          <div class="crystal-layout">
+            <article class="concept-panel">
+              <div class="process-flow"><div><span>01</span><b>가열·용해</b><small>70 °C 물 100 g</small></div><i>→</i><div><span>02</span><b>냉각·석출</b><small>10 °C 얼음물</small></div><i>→</i><div><span>03</span><b>거르기</b><small>결정 회수</small></div></div>
+              <div class="substance-compare"><div><span>붕산</span><strong>18.9 → 3.7 g</strong><em>용해도 변화 큼</em></div><div><span>황산 구리(Ⅱ)</span><strong>47.9 → 16.8 g</strong><em>10 g은 계속 녹음</em></div></div>
+              <p class="concept-caption">용액을 식혔을 때 그 온도의 포화 상태보다 많이 들어 있는 용질만 고체로 석출됩니다.</p>
+            </article>
+            <article class="lab-card crystal-lab">
+              <div class="lab-header"><div><span>가상실험 05</span><h3>붕산 결정 만들기</h3></div><button class="mini-button" id="crystalReset" type="button">초기화</button></div>
+              <div class="crystal-workbench">
+                <div class="ice-bath"><span>얼음물</span><div class="crystal-beaker"><div class="crystal-solution" id="crystalSolution"></div><div class="crystals" id="crystals" aria-hidden="true"></div></div></div>
+                <div class="control-stack">
+                  <label for="coolingRange"><span>용액의 온도</span><output id="coolingOutput">70 °C</output></label>
+                  <input id="coolingRange" type="range" min="10" max="70" value="70" step="1">
+                  <div class="result-readout"><span>예상 석출량</span><strong id="crystalMass">0.0</strong><small>g</small></div>
+                  <p class="microcopy">붕산 10 g과 황산 구리(Ⅱ) 10 g을 뜨거운 물 100 g에 녹인 상황입니다.</p>
+                </div>
+              </div>
+              <div class="analysis-strip"><span id="crystalState">모두 녹아 있음</span><p id="crystalInsight">온도를 천천히 낮춰 결정이 생기는 지점을 찾아보세요.</p></div>
+            </article>
+          </div>
+          <aside class="teacher-note"><b>교사 포인트</b><p>‘용해도가 작은 물질’이 아니라 ‘냉각했을 때 용해도 감소 폭이 큰 물질’이 잘 석출됨을 강조하세요.</p><b>생활 연결</b><p>불순물이 섞인 아스피린을 정제할 때도 재결정 원리를 이용합니다.</p></aside>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="7" aria-labelledby="slide-title-7">
+        <div class="slide-scroll">
+          <header class="slide-heading">
+            <div><p class="section-kicker"><span>TOPIC 07</span> 끓는점 차로 분리</p><h2 id="slide-title-7">먼저 끓는 물질을<br><em>기체로 보내 다시 모은다.</em></h2></div>
+            <div class="goal-chip"><span>학습 목표</span>증류 장치에서 가열·기화·냉각·액화의 흐름을 설명한다.</div>
+          </header>
+          <div class="distill-layout">
+            <article class="concept-panel narrow">
+              <div class="boiling-order"><div><span>78.2 °C</span><strong>에탄올</strong><small>먼저 기화</small></div><div><span>100 °C</span><strong>물</strong><small>나중에 기화</small></div></div>
+              <div class="particle-path"><span>가열</span><i>→</i><span>기화</span><i>→</i><span>냉각</span><i>→</i><span>액화</span></div>
+              <p class="concept-caption">완전히 순수하게 한 번에 분리되는 것은 아닙니다. 처음 모이는 액체에는 끓는점이 낮은 에탄올의 비율이 더 큽니다.</p>
+              <div class="life-examples"><span>생활 속 적용</span><b>원유 분별 증류</b><b>액체 공기 분리</b><b>우주선 물 회수</b></div>
+            </article>
+            <article class="lab-card distillation-lab">
+              <div class="lab-header"><div><span>가상실험 06</span><h3>물–에탄올 증류</h3></div><button class="mini-button" id="distillReset" type="button">초기화</button></div>
+              <div class="apparatus" aria-label="물과 에탄올 혼합물의 증류 장치">
+                <div class="flask"><div class="mixture-liquid" id="mixtureLiquid"><span>물 + 에탄올</span></div><div class="bubbles" id="distillBubbles"></div></div>
+                <div class="heater"><span></span></div>
+                <div class="vapor-tube"><div class="vapor-flow" id="vaporFlow"></div></div>
+                <div class="condenser"><span>냉각수</span><div class="drop-flow" id="dropFlow"></div></div>
+                <div class="collector"><div class="distillate" id="distillate"></div><span>모인 액체</span></div>
+              </div>
+              <div class="distill-controls"><button class="primary-button compact-button" id="distillStart" type="button">가열 시작</button><div><span>온도</span><strong id="distillTemp">20.0 °C</strong></div><div><span>주로 모이는 물질</span><strong id="distillProduct">아직 없음</strong></div></div>
+              <div class="progress-track"><div id="distillProgress"></div></div>
+            </article>
+          </div>
+          <aside class="teacher-note"><b>오개념 경보</b><p>78.2 °C에서 에탄올만 100% 끓어 나온다고 단정하지 말고 ‘에탄올이 주로 분리된다’고 표현하세요.</p><b>확장 질문</b><p>액체 공기에서 질소(-196 °C)와 산소(-183 °C) 중 무엇이 먼저 분리될까?</p></aside>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="8" aria-labelledby="slide-title-8">
+        <div class="slide-scroll">
+          <header class="slide-heading">
+            <div><p class="section-kicker"><span>CAPSTONE LAB</span> 혼합물 분리 설계</p><h2 id="slide-title-8">물 + 소금 + 기름 + 플라스틱,<br><em>어떤 순서</em>로 분리할까?</h2></div>
+            <div class="goal-chip"><span>수행 목표</span>물질의 특성과 실험 도구를 연결해 단계별 분리 계획을 완성한다.</div>
+          </header>
+          <div class="capstone-layout">
+            <article class="mixture-board">
+              <div class="mixture-vessel" id="mixtureVessel">
+                <div class="component oil-component" data-component="oil"><span>기름</span></div>
+                <div class="component water-component" data-component="water"><span>물</span></div>
+                <div class="component salt-component" data-component="salt"><span>소금</span></div>
+                <div class="beads" data-component="plastic"><i></i><i></i><i></i><span>플라스틱 구슬</span></div>
+              </div>
+              <div class="property-ledger">
+                <div><span>물</span><b>ρ 1.00</b><b>bp 100 °C</b></div><div><span>소금</span><b>물에 녹음</b><b>bp 1465 °C</b></div><div><span>기름</span><b>ρ 0.92</b><b>물과 안 섞임</b></div><div><span>PET 구슬</span><b>ρ 1.38</b><b>물에 안 녹음</b></div>
+              </div>
+            </article>
+            <article class="mission-panel">
+              <div class="mission-top"><div><span>현재 단계</span><strong id="missionStep">1 / 3</strong></div><div><span>분리 성공</span><strong id="missionScore">0 / 4</strong></div></div>
+              <h3 id="missionQuestion">가장 먼저 분리할 물질과 방법을 선택하세요.</h3>
+              <div class="method-grid" id="methodGrid"><button type="button" data-method="filter"><span>거름 장치</span><small>입자 크기·용해 여부</small></button><button type="button" data-method="funnel"><span>분별 깔때기</span><small>밀도·섞임 여부</small></button><button type="button" data-method="distill"><span>증류</span><small>끓는점 차</small></button><button type="button" data-method="cool"><span>냉각 결정화</span><small>용해도 차</small></button></div>
+              <div class="mission-feedback" id="missionFeedback" aria-live="polite"><span>힌트</span><p>고체 구슬은 물과 기름에 녹지 않고 크기가 큽니다.</p></div>
+              <div class="separation-timeline" id="separationTimeline"><div class="active"><span>01</span><b>?</b></div><i></i><div><span>02</span><b>?</b></div><i></i><div><span>03</span><b>?</b></div></div>
+              <button class="text-button" id="missionReset" type="button">실험 처음부터</button>
+            </article>
+          </div>
+          <aside class="teacher-note"><b>설계의 다양성</b><p>플라스틱 구슬을 거르고, 기름을 분별 깔때기로 분리한 뒤, 소금물을 증류하는 흐름이 대표적입니다.</p><b>토론 질문</b><p>소금과 물 중 무엇을 얻는 것이 목적이냐에 따라 마지막 장치 선택이 어떻게 달라질까?</p></aside>
+        </div>
+      </section>
+
+      <section class="slide" data-slide="9" aria-labelledby="slide-title-9">
+        <div class="slide-scroll">
+          <header class="slide-heading">
+            <div><p class="section-kicker"><span>WRAP-UP</span> 개념 연결과 형성 평가</p><h2 id="slide-title-9">특성을 알면,<br><em>분리 방법이 보인다.</em></h2></div>
+            <div class="goal-chip"><span>마무리 목표</span>물질의 특성·분리 방법·생활 사례를 하나의 체계로 연결한다.</div>
+          </header>
+          <div class="summary-map">
+            <div class="summary-source"><span>물질의 특성</span><strong>고유하고 일정한 값</strong></div>
+            <div class="summary-branches">
+              <div><span>밀도</span><b>뜨고 가라앉음</b><i>→</i><strong>분별 깔때기</strong><small>기름과 물</small></div>
+              <div><span>용해도</span><b>온도에 따른 녹는 양</b><i>→</i><strong>재결정·거르기</strong><small>붕산 정제</small></div>
+              <div><span>끓는점</span><b>기화 온도 차</b><i>→</i><strong>증류</strong><small>물과 에탄올</small></div>
+              <div><span>녹는점·어는점</span><b>상태 변화 온도 차</b><i>→</i><strong>냉각 분리</strong><small>고깃국의 기름</small></div>
+            </div>
+          </div>
+          <div class="quiz-strip" id="quizStrip">
+            <div class="quiz-copy"><span>3분 형성 평가</span><h3 id="quizQuestion">Q1. 같은 물질의 양을 두 배로 늘리면 밀도는 어떻게 될까?</h3><p id="quizExplanation">답을 선택하면 핵심 근거가 나타납니다.</p></div>
+            <div class="quiz-options" id="quizOptions"><button type="button" data-answer="wrong">두 배가 된다</button><button type="button" data-answer="correct">변하지 않는다</button><button type="button" data-answer="wrong">절반이 된다</button></div>
+            <div class="quiz-nav"><button class="mini-button" id="quizNext" type="button" disabled>다음 문제</button><span id="quizCount">1 / 4</span></div>
+          </div>
+          <div class="closing-prompt"><span>EXIT TICKET</span><p>오늘 배운 물질의 특성 하나를 골라, 그것을 이용해 생활 속 혼합물을 분리하는 방법을 한 문장으로 설명해 보세요.</p></div>
+          <aside class="teacher-note"><b>평가 기준</b><p>① 알맞은 특성 선택 ② 크기 관계나 변화 설명 ③ 적절한 실험 장치 연결의 세 요소로 피드백하세요.</p><b>다음 차시 연결</b><p>생활 속 정수, 자원 재활용, 우주선 물 회수 문제로 확장할 수 있습니다.</p></aside>
+        </div>
+      </section>
+    </main>
+
+    <div class="deck-controls" aria-label="슬라이드 이동">
+      <button id="prevSlide" type="button" aria-label="이전 슬라이드">←</button>
+      <div class="slide-counter"><span id="currentSlide">01</span><i></i><span id="totalSlides">10</span></div>
+      <button id="nextSlide" type="button" aria-label="다음 슬라이드">→</button>
+    </div>
+    <div class="progress-line" aria-hidden="true"><div id="deckProgress"></div></div>
+  </div>
+
+  <dialog class="overview-dialog" id="overviewDialog">
+    <form method="dialog"><button class="dialog-close" aria-label="닫기">×</button></form>
+    <p class="section-kicker"><span>LESSON GUIDE</span> 8차시 재구성안</p>
+    <h2>교과서 흐름을 ‘특성 → 증거 → 분리’로 재구성했습니다.</h2>
+    <div class="lesson-sequence">
+      <div><span>1차시</span><b>밀도로 물질 구별</b><small>철·알루미늄 밀도 측정</small></div>
+      <div><span>2차시</span><b>용해도와 포화</b><small>용해도 곡선·기체 용해도</small></div>
+      <div><span>3차시</span><b>상태 변화 온도</b><small>가열 곡선·양과 종류 비교</small></div>
+      <div><span>4차시</span><b>순물질과 혼합물</b><small>특성의 일정성으로 분류</small></div>
+      <div><span>5차시</span><b>밀도로 혼합물 분리</b><small>분별 깔때기</small></div>
+      <div><span>6차시</span><b>용해도로 혼합물 분리</b><small>재결정·거르기</small></div>
+      <div><span>7차시</span><b>끓는점으로 혼합물 분리</b><small>증류·생활 사례</small></div>
+      <div><span>8차시</span><b>통합 문제 해결</b><small>분리 실험 설계·형성 평가</small></div>
+    </div>
+    <div class="dialog-tip"><b>사용 팁</b><p>교사 노트를 켜면 각 주제의 발문·오개념·형성 평가가 나타납니다. 키보드 ← → 키와 전체 화면을 활용해 바로 수업할 수 있습니다.</p></div>
+  </dialog>
+  <div class="sr-only" id="liveRegion" aria-live="polite"></div>
+</body>
+</html>
